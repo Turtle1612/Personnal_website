@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio cá nhân - Lê Thanh Nhiều | SE - CNTT năm 2 | Neon Dark Theme" />
+  <title>Lê Thanh Nhiều | Neon Portfolio</title>
+
+  <!-- Font (optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Animated background -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Soft overlay grain + vignette -->
+  <div class="bg-overlay" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Đi tới trang chủ">
+      <span class="brand__dot"></span>
+      <span class="brand__text">Lê Thanh Nhiều</span>
+    </a>
+
+    <nav class="nav">
+      <a href="#about">Giới thiệu</a>
+      <a href="#skills">Kỹ năng</a>
+      <a href="#projects">Dự án</a>
+      <a href="#services">Dịch vụ</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="toggle-motion" class="btn btn--ghost" type="button" aria-pressed="false" title="Bật/Tắt hiệu ứng">
+        Motion
+      </button>
+      <a class="btn btn--primary" href="#contact">Hire Me</a>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="hero__left">
+        <div class="badge">
+          <span class="badge__pulse" aria-hidden="true"></span>
+          <span>SE • CNTT • Năm 2</span>
+        </div>
+
+        <h1 class="hero__title reveal">
+          Xin chào, mình là <span class="neon">Lê Thanh Nhiều</span>.
+          <br />
+          <span class="muted">Mình xây dựng web app gọn gàng, tối ưu và dễ mở rộng.</span>
+        </h1>
+
+        <p class="hero__subtitle reveal">
+          Vị trí mục tiêu: <strong class="neon2">Developer</strong>.
+          <br />
+          <span class="typewriter" data-words='["Web App Development","UI/UX Neon Theme","Clean Code & Maintainability"]'></span>
+        </p>
+
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" href="#projects">Xem dự án</a>
+          <a class="btn btn--ghost" href="#about">Tìm hiểu thêm</a>
+        </div>
+
+        <div class="hero__meta reveal">
+          <div class="meta-card tilt" data-tilt>
+            <div class="meta-card__label">Ngành</div>
+            <div class="meta-card__value">CNTT (SE)</div>
+          </div>
+          <div class="meta-card tilt" data-tilt>
+            <div class="meta-card__label">Trình độ</div>
+            <div class="meta-card__value">Năm 2</div>
+          </div>
+          <div class="meta-card tilt" data-tilt>
+            <div class="meta-card__label">Stack</div>
+            <div class="meta-card__value">HTML/CSS/JS • Java • C/C++</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__right reveal">
+        <div class="avatar-wrap tilt" data-tilt>
+          <!-- Avatar placeholder: thay src bằng ảnh của bạn -->
+          <img
+            class="avatar"
+            src="avatar1.jpg"
+            alt="Avatar của Lê Thanh Nhiều"
+            loading="lazy"
+          />
+          <div class="avatar__ring" aria-hidden="true"></div>
+          <div class="avatar__glow" aria-hidden="true"></div>
+        </div>
+
+        <div class="hero__cards">
+          <div class="info-card tilt reveal" data-tilt>
+            <div class="info-card__title">Điểm mạnh</div>
+            <ul class="info-list">
+              <li>Logic & nền tảng thuật toán</li>
+              <li>Thực hành dự án nhanh</li>
+              <li>Tư duy tổ chức code rõ ràng</li>
+            </ul>
+          </div>
+
+          <div class="info-card tilt reveal" data-tilt>
+            <div class="info-card__title">Mục tiêu</div>
+            <p class="info-card__text">
+              Học sâu hơn về backend + system design, nâng chuẩn code và đóng góp vào sản phẩm thực tế.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="section__head reveal">
+        <h2 class="section__title">Giới thiệu</h2>
+        <p class="section__desc">
+          Mình là sinh viên <strong>SE</strong> thuộc <strong>ngành CNTT</strong>, hiện đang học <strong>năm 2</strong>.
+          Mình tập trung xây dựng sản phẩm theo hướng “gọn - rõ - chạy ổn định”.
+        </p>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="panel tilt reveal" data-tilt>
+          <h3 class="panel__title">Thông tin nhanh</h3>
+          <div class="facts">
+            <div class="fact">
+              <div class="fact__k">Họ tên</div>
+              <div class="fact__v">Lê Thanh Nhiều</div>
+            </div>
+            <div class="fact">
+              <div class="fact__k">Chuyên ngành</div>
+              <div class="fact__v">Software Engineering (SE)</div>
+            </div>
+            <div class="fact">
+              <div class="fact__k">Năm học</div>
+              <div class="fact__v">Năm 2</div>
+            </div>
+            <div class="fact">
+              <div class="fact__k">Vị trí</div>
+              <div class="fact__v">Developer</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel tilt reveal" data-tilt>
+          <h3 class="panel__title">Định hướng</h3>
+          <p class="panel__text">
+            Mình ưu tiên:
+          </p>
+          <ul class="bullets">
+            <li>UI hiện đại (neon tối) + trải nghiệm mượt</li>
+            <li>Codebase dễ đọc, dễ mở rộng</li>
+            <li>Tối ưu hiệu năng cơ bản (assets, animation, layout)</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">Clean UI</span>
+            <span class="chip">Performance</span>
+            <span class="chip">Maintainability</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="section__head reveal">
+        <h2 class="section__title">Kỹ năng</h2>
+        <p class="section__desc">
+          Các ngôn ngữ và công nghệ mình sử dụng:
+        </p>
+      </div>
+
+      <div class="skills">
+        <div class="skill-card tilt reveal" data-tilt>
+          <div class="skill-card__top">
+            <span class="skill-icon">C</span>
+            <h3>C</h3>
+          </div>
+          <p>Nền tảng logic, cấu trúc dữ liệu cơ bản, tư duy hệ thống.</p>
+          <div class="bar"><span style="width: 70%"></span></div>
+        </div>
+
+        <div class="skill-card tilt reveal" data-tilt>
+          <div class="skill-card__top">
+            <span class="skill-icon">C++</span>
+            <h3>C++</h3>
+          </div>
+          <p>OOP cơ bản, xử lý bài toán, tối ưu hoá đơn giản.</p>
+          <div class="bar"><span style="width: 65%"></span></div>
+        </div>
+
+        <div class="skill-card tilt reveal" data-tilt>
+          <div class="skill-card__top">
+            <span class="skill-icon">Java</span>
+            <h3>Java</h3>
+          </div>
+          <p>OOP, class/package, xây dựng project theo cấu trúc rõ ràng.</p>
+          <div class="bar"><span style="width: 75%"></span></div>
+        </div>
+
+        <div class="skill-card tilt reveal" data-tilt>
+          <div class="skill-card__top">
+            <span class="skill-icon">WEB</span>
+            <h3>HTML • CSS • JavaScript</h3>
+          </div>
+          <p>UI/UX, animation, DOM, hiệu ứng tương tác, responsive.</p>
+          <div class="bar"><span style="width: 80%"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section__head reveal">
+        <h2 class="section__title">Dự án</h2>
+        <p class="section__desc">
+          Một số project tiêu biểu của mình:
+        </p>
+      </div>
+
+      <div class="projects">
+        <article class="project-card tilt reveal" data-tilt>
+          <div class="project-card__head">
+            <h3>Personal Website</h3>
+            <span class="tag">Portfolio</span>
+          </div>
+          <p>Website cá nhân – giới thiệu bản thân, kỹ năng và dự án.</p>
+          <div class="project-card__actions">
+            <a class="btn btn--ghost" href="https://personal-website-7gc.pages.dev/" target="_blank" rel="noopener">Live</a>
+          </div>
+        </article>
+
+        <article class="project-card tilt reveal" data-tilt>
+          <div class="project-card__head">
+            <h3>Nice Home</h3>
+            <span class="tag">Real Estate</span>
+          </div>
+          <p>Dự án giao diện danh sách listings, bố cục rõ ràng và dễ dùng.</p>
+          <div class="project-card__actions">
+            <a class="btn btn--ghost" href="https://nicehome.pages.dev/src/pages/listings/" target="_blank" rel="noopener">Live</a>
+          </div>
+        </article>
+
+        <article class="project-card tilt reveal" data-tilt>
+          <div class="project-card__head">
+            <h3>Sale Product</h3>
+            <span class="tag">E-Commerce</span>
+          </div>
+          <p>Website giới thiệu sản phẩm + trang listing + CTA mua hàng (demo).</p>
+          <div class="project-card__actions">
+            <a class="btn btn--ghost" href="#contact">Liên hệ để xem demo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="section__head reveal">
+        <h2 class="section__title">Dịch vụ</h2>
+        <p class="section__desc">
+          Mình có thể hỗ trợ bạn theo các hạng mục sau:
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="service-card tilt reveal" data-tilt>
+          <h3>Dev Web App</h3>
+          <p>Xây dựng website/web app theo yêu cầu: landing, portfolio, dashboard cơ bản.</p>
+          <ul class="mini">
+            <li>UI neon tối / hiện đại</li>
+            <li>Responsive</li>
+            <li>Deploy cơ bản</li>
+          </ul>
+        </article>
+
+        <article class="service-card tilt reveal" data-tilt>
+          <h3>Gia sư cơ bản</h3>
+          <p>Hướng dẫn nền tảng lập trình mức cơ bản cho người mới.</p>
+          <ul class="mini">
+            <li>C / C++ (cơ bản)</li>
+            <li>Java (OOP cơ bản)</li>
+            <li>HTML/CSS/JS (cơ bản)</li>
+          </ul>
+        </article>
+
+        <article class="service-card tilt reveal" data-tilt>
+          <h3>Tối ưu & chỉnh sửa</h3>
+          <p>Chỉnh UI, tối ưu animation, sửa lỗi giao diện và cấu trúc project.</p>
+          <ul class="mini">
+            <li>Refactor CSS</li>
+            <li>Improve UX</li>
+            <li>Performance basic</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="section__head reveal">
+        <h2 class="section__title">Liên hệ</h2>
+        <p class="section__desc">
+          Bạn có thể để lại thông tin, mình sẽ phản hồi sớm.
+        </p>
+      </div>
+
+      <div class="grid grid--2">
+        <form class="panel form tilt reveal" data-tilt id="contact-form">
+          <label>
+            <span>Họ tên</span>
+            <input type="text" name="name" placeholder="Ví dụ: Nguyễn Văn A" required />
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@email.com" required />
+          </label>
+
+          <label>
+            <span>Nội dung</span>
+            <textarea name="message" rows="5" placeholder="Bạn muốn làm dự án gì?" required></textarea>
+          </label>
+
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit">Gửi</button>
+            <button class="btn btn--ghost" type="reset">Xoá</button>
+          </div>
+
+          <p class="form__note" id="form-note" aria-live="polite"></p>
+        </form>
+
+        <aside class="panel tilt reveal" data-tilt>
+          <h3 class="panel__title">Thông tin</h3>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="contact-card__k">Vị trí</div>
+              <div class="contact-card__v">Developer (SE)</div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card__k">Hợp tác</div>
+              <div class="contact-card__v">Web app / Gia sư cơ bản</div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card__k">Gợi ý</div>
+              <div class="contact-card__v"></div>
+            </div>
+          </div>
+
+          <div class="social">
+            <a class="social__btn" href="#" aria-label="GitHub (cập nhật link)">
+              GitHub
+            </a>
+            <a class="social__btn" href="#" aria-label="LinkedIn (cập nhật link)">
+              LinkedIn
+            </a>
+            <a class="social__btn" href="https://www.facebook.com/share/1AS9BQRrcq/?mibextid=wwXIfr" aria-label="Facebook (cập nhật link)">
+              Facebook
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__left">
+        <span class="brand__dot"></span>
+        <span>© <span id="year"></span> Lê Thanh Nhiều</span>
+      </div>
+      <div class="footer__right">
+        <a href="#home">Top</a>
+        <span class="sep">•</span>
+        <a href="#projects">Projects</a>
+        <span class="sep">•</span>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Avatar placeholder SVG generated locally (no internet needed) -->
+  <!-- You can replace this file with your own avatar image and update the src in HTML -->
+  <script>
+    // Create a simple SVG placeholder file if not present (optional convenience)
+    // This script does not overwrite an existing file; it only shows guidance in console.
+    console.info("Tip: Replace avatar-placeholder.svg with your real avatar and keep the same filename.");
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
